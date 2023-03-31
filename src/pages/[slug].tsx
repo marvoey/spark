@@ -5,7 +5,8 @@ import {getClient} from 'services/content';
 
 const SparkPage = ({entry}): JSX.Element => {
   console.log('entry via slug', entry);
-  return <Spark entry={entry.items[0]} />;
+  const justEntry = entry.items[0];
+  return <Spark entry={justEntry} />;
 };
 
 export async function getServerSideProps(context) {

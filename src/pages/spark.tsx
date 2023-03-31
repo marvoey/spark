@@ -5,7 +5,7 @@ import {getClient} from 'services/content';
 
 const mock = {
   fields: {
-    topHeroHeader: "This is the header",
+    topHeroHeader: 'This is the header',
     body: 'This is the body. Should be a couple of different sentences. ',
     topHeroVideo: {
       fields: {
