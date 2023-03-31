@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { alpha, useTheme } from '@mui/material/styles';
+import {alpha, useTheme} from '@mui/material/styles';
 
 interface Props {
   title: string;
@@ -20,7 +20,7 @@ interface Props {
   }>;
 }
 
-const OverviewSection = ({ title, description, items }: Props): JSX.Element => {
+const OverviewSection = ({title, description, items}: Props): JSX.Element => {
   const theme = useTheme();
 
   return (
@@ -51,7 +51,7 @@ const OverviewSection = ({ title, description, items }: Props): JSX.Element => {
                 <Box
                   sx={{
                     display: 'flex',
-                    flexDirection: { xs: 'column', sm: 'row' },
+                    flexDirection: {xs: 'column', sm: 'row'},
                   }}
                 >
                   <Box

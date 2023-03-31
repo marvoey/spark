@@ -8,12 +8,12 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
 import NoSsr from '@mui/material/NoSsr';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
+import {useTheme} from '@mui/material/styles';
 
 import Main from 'layouts/Main';
 import Container from 'components/Container';
 
-import { Hero, OverviewSection } from './components';
+import {Hero, OverviewSection} from './components';
 
 import data from './data';
 
@@ -23,7 +23,7 @@ const IndexView = (): JSX.Element => {
     defaultMatches: true,
   });
 
-  const { application, marketing, ecommerce } = data;
+  const {application, marketing, ecommerce} = data;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -34,7 +34,7 @@ const IndexView = (): JSX.Element => {
     setTimeout(
       (): JSX.Element => {
         const element: HTMLElement = document.querySelector(`#${id}`);
-        if (!element) {
+        if(!element) {
           return;
         }
 
@@ -116,7 +116,7 @@ const IndexView = (): JSX.Element => {
               <Box
                 onClick={() => scrollTo('js--blocks__index')}
                 role="presentation"
-                sx={{ position: 'fixed', bottom: 24, right: 32 }}
+                sx={{position: 'fixed', bottom: 24, right: 32}}
               >
                 <Fab
                   color="primary"

@@ -1,6 +1,6 @@
 /* eslint-disable react/display-name */
 import React from 'react';
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, {Html, Head, Main, NextScript} from 'next/document';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 
@@ -85,8 +85,8 @@ MyDocument.getInitialProps = async (ctx) => {
 
   // You can consider sharing the same emotion cache between all the SSR requests to speed up performance.
   // However, be aware that it can have global side effects.
-  const cache = createCache({ key: 'css', prepend: true });
-  const { extractCriticalToChunks } = createEmotionServer(cache);
+  const cache = createCache({key: 'css', prepend: true});
+  const {extractCriticalToChunks} = createEmotionServer(cache);
 
   ctx.renderPage = () =>
     originalRenderPage({
@@ -106,7 +106,7 @@ MyDocument.getInitialProps = async (ctx) => {
       data-emotion={`${style.key} ${style.ids.join(' ')}`}
       key={style.key}
       // eslint-disable-next-line react/no-danger
-      dangerouslySetInnerHTML={{ __html: style.css }}
+      dangerouslySetInnerHTML={{__html: style.css}}
     />
   ));
 
