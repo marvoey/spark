@@ -5,8 +5,7 @@ import {getClient} from 'services/content';
 
 const SparkPage = ({entry}): JSX.Element => {
   console.log('entry via slug', entry);
-  const justEntry = entry.items[0];
-  return <Spark entry={justEntry} />;
+  return <Spark entry={entry} />;
 };
 
 export async function getServerSideProps(context) {
@@ -23,7 +22,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
-      entry
+      entry: entry.items[0]
     }, // will be passed to the page component as props
   };
 }
