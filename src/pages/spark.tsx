@@ -3,30 +3,22 @@ import Spark from 'views/Spark';
 
 import {getClient} from 'services/content';
 
-const SparkPage = ({entries}): JSX.Element => {
-  console.log('entries', entries);
-  return <Spark />;
+const mock = {
+  fields: {
+    topHeroHeader: "This is the header",
+    body: 'This is the body. Should be a couple of different sentences. ',
+    topHeroVideo: {
+      fields: {
+        file: {
+          url: '/videos/video.mp4',
+        },
+      },
+    },
+  }
 };
 
-export async function getServerSideProps(context) {
-  const client = getClient();
-
-  const slug = context.query.slug ? context.query.slug : 'coles-group';
-
-  const content_type = 'onePager';
-  const entries = await client.getEntries({
-    content_type,
-    // 'fields.slug': slug,
-    include: 2
-  });
-
-  console.log('entries', entries);
-
-  return {
-    props: {
-      entries
-    }, // will be passed to the page component as props
-  };
-}
+const SparkPage = ({entries}): JSX.Element => {
+  return <Spark entry={mock} />;
+};
 
 export default SparkPage;

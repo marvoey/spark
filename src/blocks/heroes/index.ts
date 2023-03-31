@@ -13,7 +13,6 @@ export {default as HeroWithIllustrationAndCta} from './HeroWithIllustrationAndCt
 export {default as HeroWithLogoGridAndDesktopScreenshot} from './HeroWithLogoGridAndDesktopScreenshot';
 export {default as HeroWithBackgroundVideo} from './HeroWithBackgroundVideo';
 export {default as SimpleHeroWithBottomVideo} from './SimpleHeroWithBottomVideo';
-export {default as SimpleHeroWithVideo} from './SimpleHeroWithVideo';
 export {default as HeroWithPrimaryBackgroundAndDesktopScreenshot} from './HeroWithPrimaryBackgroundAndDesktopScreenshot';
 export {default as FullScreenHeroWithLogoGrid} from './FullScreenHeroWithLogoGrid';
 export {default as SimpleHeroWithImageAndCtaButtons} from './SimpleHeroWithImageAndCtaButtons';
