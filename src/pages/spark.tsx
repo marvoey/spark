@@ -1,8 +1,6 @@
 import React from 'react';
 import Spark from 'views/Spark';
 
-import {getClient} from 'services/content';
-
 const mock = {
   fields: {
     topHeroHeader: 'This is the header',
@@ -17,7 +15,7 @@ const mock = {
   }
 };
 
-const SparkPage = ({entries}): JSX.Element => {
+const SparkPage = (): JSX.Element => {
   return <Spark entry={mock} />;
 };
 

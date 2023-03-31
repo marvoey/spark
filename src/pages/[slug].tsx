@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Spark from 'views/Spark';
 
 import {getClient} from 'services/content';
@@ -27,4 +28,7 @@ export async function getServerSideProps(context) {
   };
 }
 
+SparkPage.propTypes = {
+  entry: PropTypes.object,
+};
 export default SparkPage;
