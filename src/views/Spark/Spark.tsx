@@ -7,12 +7,22 @@ import FeaturesWithMasonryCardsAndCheckIcons from './components/FeaturesWithMaso
 import BlogCardsWithFullBackgroundImage
   from './components/BlogCardsWithFullBackgroundImage';
 
-import {getClient} from 'services/content';
-import {BLOCKS, INLINES} from '@contentful/rich-text-types';
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
+interface entryType {
+  fields: {
+    topHeroHeader: string,
+    body: string,
+    topHeroVideo: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+  };
+}
 
-const Spark = ({entry}): JSX.Element => {
-  console.log('entry in spark component', entry);
+const Spark = ({entry}: {entry: entryType;}): JSX.Element => {
+  // console.log('entry in spark component', entry);
 
   const simpleHeroWithVideo = {
     header: entry.fields.topHeroHeader,

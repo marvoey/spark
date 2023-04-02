@@ -1,18 +1,19 @@
 import React from 'react';
-import {alpha, useTheme} from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
 import Container from 'components/Container';
 
-const SimpleHeroWithVideo = ({content}): JSX.Element => {
+interface contentType {
+  header: string,
+  body: string,
+  video: string,
+}
+
+const SimpleHeroWithVideo = ({content}: {content: contentType;}): JSX.Element => {
   const theme = useTheme();
-  const isMd = useMediaQuery(theme.breakpoints.up('md'), {
-    defaultMatches: true,
-  });
 
   console.log('simple hero video content:', content);
 

@@ -5,7 +5,6 @@ import Grid from '@mui/material/Grid';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
-import {useTheme} from '@mui/material/styles';
 
 import Container from 'components/Container';
 
@@ -101,8 +100,6 @@ const mock = [
 ];
 
 const Features = (): JSX.Element => {
-  const theme = useTheme();
-
   return (
     <Container>
       <Box>
