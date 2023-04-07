@@ -99,7 +99,7 @@ const mock = [
   },
 ];
 
-const Features = (): JSX.Element => {
+const SimpleCenteredFeaturesSection = (): JSX.Element => {
   return (
     <Container>
       <Box>
@@ -159,4 +159,4 @@ const Features = (): JSX.Element => {
   );
 };
 
-export default Features;
+export default SimpleCenteredFeaturesSection;

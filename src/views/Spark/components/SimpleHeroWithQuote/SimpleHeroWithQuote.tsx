@@ -9,7 +9,15 @@ import Grid from '@mui/material/Grid';
 
 import Container from 'components/Container';
 
-const SimpleHeroWithQuote = (): JSX.Element => {
+export interface SimpleHeroWithQuoteType {
+  name: string,
+  quote: string,
+  slug: string,
+  theirCredential: string,
+  whoSaidThis: string,
+}
+
+const SimpleHeroWithQuote = ({content}: {content: SimpleHeroWithQuoteType;}): JSX.Element => {
   const theme = useTheme();
 
   return (
@@ -30,16 +38,15 @@ const SimpleHeroWithQuote = (): JSX.Element => {
                   <FormatQuote sx={{typography: 'h1'}} />
                   <Box marginBottom={3}>
                     <Typography variant="h6" component="p" color="text.secondary">
-                      Omnichannel modernization with
-                      Contentful Composable Content Platform
+                      {content.quote}
                     </Typography>
                   </Box>
                 </Box>
               </Grid>
               <Grid item container xs={12} md={6} alignItems={'center'}>
                 <Typography variant="h6" component="p" color="text.secondary">
-                  - Daniel Heaf,<br />
-                  Chief Digital Officer at Nike
+                  - {content.whoSaidThis},<br />
+                  {content.theirCredential}
                 </Typography>
               </Grid>
             </Grid>

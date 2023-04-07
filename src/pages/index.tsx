@@ -1,8 +1,12 @@
-import React from 'react';
-import IndexView from 'views/IndexView';
+import React, {Component} from 'react';
+import Router from 'next/router';
 
-const IndexPage = (): JSX.Element => {
-  return <IndexView />;
-};
+export default class Index extends Component {
+  componentDidMount = () => {
+    Router.push('/test');
+  };
 
-export default IndexPage;
+  render() {
+    return <div />;
+  }
+}

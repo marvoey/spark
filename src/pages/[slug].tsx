@@ -14,6 +14,11 @@ export async function getServerSideProps(context) {
 
   const slug = context.query.slug ? context.query.slug : 'coles-group';
 
+  const entries = await client.getEntries({
+    'content_type': 'onePager',
+    include: 2
+  });
+
   const content_type = 'onePager';
   const entry = await client.getEntries({
     content_type,
@@ -23,6 +28,7 @@ export async function getServerSideProps(context) {
 
   return {
     props: {
+      entries,
       entry: entry.items[0]
     }, // will be passed to the page component as props
   };

@@ -6,13 +6,21 @@ import Grid from '@mui/material/Grid';
 
 import Container from 'components/Container';
 
-interface contentType {
-  header: string,
+export interface SimpleHeroWithVideoType {
   body: string,
-  video: string,
+  header: string,
+  name: string,
+  slug: string,
+  video: {
+    fields: {
+      file: {
+        url: string,
+      };
+    };
+  };
 }
 
-const SimpleHeroWithVideo = ({content}: {content: contentType;}): JSX.Element => {
+const SimpleHeroWithVideo = ({content}: {content: SimpleHeroWithVideoType;}): JSX.Element => {
   const theme = useTheme();
 
   console.log('simple hero video content:', content);
@@ -76,15 +84,15 @@ const SimpleHeroWithVideo = ({content}: {content: contentType;}): JSX.Element =>
                 loop={true}
               >
                 <source
-                  src={content.video}
+                  src={content.video.fields.file.url}
                   type="video/mp4"
                 />
                 <source
-                  src={content.video}
+                  src={content.video.fields.file.url}
                   type="video/webm"
                 />
                 <source
-                  src={content.video}
+                  src={content.video.fields.file.url}
                   type="video/ogg"
                 />
                 Your browser do not support HTML5 video.

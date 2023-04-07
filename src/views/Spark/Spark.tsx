@@ -2,7 +2,7 @@ import React from 'react';
 
 import MainSimple from 'layouts/MainSimple';
 import {SimpleHeroWithQuote, SimpleHeroWithVideo} from './components';
-import Features from './components/Features';
+import Features from './components/SimpleCenteredFeaturesSection';
 import FeaturesWithMasonryCardsAndCheckIcons from './components/FeaturesWithMasonryCardsAndCheckIcons';
 import BlogCardsWithFullBackgroundImage
   from './components/BlogCardsWithFullBackgroundImage';
@@ -32,9 +32,9 @@ const Spark = ({entry}: {entry: entryType;}): JSX.Element => {
 
   return (
     <MainSimple>
-      <SimpleHeroWithVideo content={simpleHeroWithVideo} />
+      {/* <SimpleHeroWithVideo content={simpleHeroWithVideo} />
       <SimpleHeroWithQuote />
-      <Features />
+      <Features /> */}
       <FeaturesWithMasonryCardsAndCheckIcons />
       <BlogCardsWithFullBackgroundImage />
     </MainSimple>
