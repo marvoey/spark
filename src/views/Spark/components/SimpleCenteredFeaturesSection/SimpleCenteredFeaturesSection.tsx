@@ -99,6 +99,18 @@ const mock = [
   },
 ];
 
+export interface FeatureType {
+  body: string,
+  name: string,
+  slug: string,
+}
+
+export interface SimpleCenteredFeaturesSectionType {
+  features: FeatureType[],
+  name: string,
+  slug: string;
+}
+
 const SimpleCenteredFeaturesSection = (): JSX.Element => {
   return (
     <Container>
