@@ -62,7 +62,7 @@ const Footer = (): JSX.Element => {
               </Link>
             </Box>
             <Box marginTop={1}>
-              <Button
+              {/* <Button
                 variant="outlined"
                 color="primary"
                 component="a"
@@ -71,7 +71,7 @@ const Footer = (): JSX.Element => {
                 size="small"
               >
                 Purchase now
-              </Button>
+              </Button> */}
             </Box>
           </Box>
         </Box>
@@ -83,7 +83,7 @@ const Footer = (): JSX.Element => {
           color="text.secondary"
           gutterBottom
         >
-          &copy; theFront. 2021, Maccarian. All rights reserved
+          &copy; Spark. 2023, Contentful. All rights reserved
         </Typography>
         <Typography
           align={'center'}
