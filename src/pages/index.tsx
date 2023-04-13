@@ -1,44 +1,49 @@
 import React from 'react';
-import {getClient} from 'services/content';
+import { getClient } from 'services/content';
 import Container from 'components/Container';
-import {Box, Link, List, ListItem, Typography} from '@mui/material';
-import {OnePagerType} from './[slug]';
+import { Box, Link, List, ListItem, Typography } from '@mui/material';
+import { OnePagerType } from './[slug]';
+import Fluid from 'layouts/Fluid';
 
-const Index = ({entries}: {entries: OnePagerType[];}): JSX.Element => {
+const Index = ({ entries }: { entries: OnePagerType[]; }): JSX.Element => {
   console.log('entries:', entries);
   return (
-    <Container>
-      <Box marginBottom={'30px'}>
-        <Typography
-          variant={'h3'}
-          fontWeight={700}
-          align={'center'}
-          gutterBottom
-        >
-          Still a lot to do but it is starting
-          <br />
-          to come together.
-        </Typography>
-        <Typography variant={'h6'} color={'text.secondary'} align={'center'}>
-          A couple of components have been built out. Below you
-          <br />
-          should see a list of links to a couple of one pagers.
-        </Typography>
+    <Fluid>
+      <Box bgcolor={'alternate.main'}>
+        <Container>
+          <Box marginBottom={'30px'}>
+            <Typography
+              variant={'h3'}
+              fontWeight={700}
+              align={'center'}
+              gutterBottom
+            >
+              Still a lot to do but it is starting
+              <br />
+              to come together.
+            </Typography>
+            <Typography variant={'h6'} color={'text.secondary'} align={'center'}>
+              A couple of components have been built out. Below you
+              <br />
+              should see a list of links to a couple of one pagers.
+            </Typography>
+          </Box>
+          <Box>
+            <List>
+              {entries.map(entry => {
+                return (
+                  <ListItem key={entry.sys.id} disablePadding>
+                    <Link href={`/${entry.fields.slug}`}>
+                      {entry.fields.name}
+                    </Link>
+                  </ListItem>
+                );
+              })}
+            </List>
+          </Box>
+        </Container>
       </Box>
-      <Box>
-        <List>
-          {entries.map(entry => {
-            return (
-              <ListItem key={entry.sys.id} disablePadding>
-                <Link href={`/${entry.fields.slug}`}>
-                  {entry.fields.name}
-                </Link>
-              </ListItem>
-            );
-          })}
-        </List>
-      </Box>
-    </Container>
+    </Fluid>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Link, Typography} from '@mui/material';
+import {Box, Container, Link, Typography} from '@mui/material';
 
 import SimpleHeroWithVideo, {SimpleHeroWithVideoType} from 'views/Spark/components/SimpleHeroWithVideo/SimpleHeroWithVideo';
 import SimpleHeroWithQuote, {SimpleHeroWithQuoteType} from 'views/Spark/components/SimpleHeroWithQuote/SimpleHeroWithQuote';
@@ -49,40 +49,41 @@ const Canvas = ({canvas, entry}: {
           else if('quote' in item.fields) {
             return (
               <>
-                <SimpleHeroWithQuote content={item.fields} />
+                <SimpleHeroWithQuote key={item.sys.id} content={item.fields} />
               </>
             );
           }
-          else if(item.sys.contentType.sys.id == 'simpleCenteredFeaturesSection') {
+          else if('features' in item.fields) {
+            console.log('simpleCeneteredFeaturesSection:', item);
             return (
               <>
-                <SimpleCenteredFeaturesSection />
+                <SimpleCenteredFeaturesSection key={item.sys.id} section={item.fields} />
               </>
             );
           }
           else if(item.sys.contentType.sys.id == 'featuresWithMasonryCards') {
             return (
-              <>
+              <Box key={item.sys.id}>
                 <Typography variant="body1">
                   Some name this is hardcoded
                 </Typography>
                 <Typography variant='subtitle1'>
                   featuresWithMasonryCards
                 </Typography>
-              </>
+              </Box>
             );
           }
           else if(item.sys.contentType.sys.id == 'blogCardsWithFullBackgroundImage') {
             return (
               <>
-                <BlogCardsWithFullBackgroundImage />
+                <BlogCardsWithFullBackgroundImage key={item.sys.id} />
               </>
             );
           }
           else if(item.sys.contentType.sys.id == 'featuresWithMasonryCardsAndCheckIcons') {
             return (
               <>
-                <FeaturesWithMasonryCardsAndCheckIcons />
+                <FeaturesWithMasonryCardsAndCheckIcons key={item.sys.id} />
               </>
             );
           }

@@ -1,0 +1,11 @@
+{
+	"folders": [
+    {
+      "path": "../../../ckeditor-contentful-app"
+    },
+    {
+      "path": "../../../ckeditor-contentful-app-typescript"
+    }
+  ],
+  "settings": {}
+}

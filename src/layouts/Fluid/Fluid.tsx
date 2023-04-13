@@ -37,7 +37,7 @@ const Fluid = ({
   const scrollTo = (id: string): void => {
     setTimeout(() => {
       const element: HTMLElement = document.querySelector(`#${id}`);
-      if (!element) {
+      if(!element) {
         return;
       }
 
@@ -87,7 +87,7 @@ const Fluid = ({
                 width={1}
               />
             </Box>
-            <Button
+            {/* <Button
               variant="contained"
               color="primary"
               component="a"
@@ -96,7 +96,7 @@ const Fluid = ({
               size="large"
             >
               Buy now
-            </Button>
+            </Button> */}
           </Box>
         </Container>
       </AppBar>

@@ -39,7 +39,7 @@ const ResizableFrame = ({
   const [random, setRandom] = useState(0);
 
   const setIframeHeight = () => {
-    if (
+    if(
       iframeEl &&
       iframeEl.current &&
       iframeEl.current.contentWindow &&
@@ -62,12 +62,12 @@ const ResizableFrame = ({
   }, [theme.palette.mode]);
 
   const handleResizeBtnClick = (width) => {
-    if (width === viewportWidth) {
+    if(width === viewportWidth) {
       return;
     }
 
     const values = Object.keys(viewportWidthMap);
-    if (values.indexOf(width) === -1) {
+    if(values.indexOf(width) === -1) {
       return;
     }
 
@@ -119,7 +119,7 @@ const ResizableFrame = ({
             padding={2}
             borderBottom={`1px solid ${theme.palette.divider}`}
           >
-            <Button
+            {/* <Button
               component={'a'}
               href={
                 'https://material-ui.com/store/items/the-front-landing-page/'
@@ -147,7 +147,7 @@ const ResizableFrame = ({
               }
             >
               Get the code
-            </Button>
+            </Button> */}
             <Box display={'flex'} alignItems={'center'}>
               <ButtonGroup
                 variant="outlined"

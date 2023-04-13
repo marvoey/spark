@@ -111,7 +111,7 @@ export interface SimpleCenteredFeaturesSectionType {
   slug: string;
 }
 
-const SimpleCenteredFeaturesSection = (): JSX.Element => {
+const SimpleCenteredFeaturesSection = ({section}: {section: SimpleCenteredFeaturesSectionType;}): JSX.Element => {
   return (
     <Container>
       <Box>
